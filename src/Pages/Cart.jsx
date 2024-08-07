@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
 import {Link, useNavigate} from "react-router-dom"
 import {  deleteFromCart, makeOrder } from "../redux/apiCalls"
 import { Tooltip } from "@mui/material"
-import {PayPalButton} from 'react-paypal-button-v2'
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 // const dotenv =require('dotenv').config();   //not needed in react
 
 const Cart = () => {
@@ -86,7 +86,7 @@ const Cart = () => {
         {pay && <Payment>
             <CancelPayment onClick={()=>setPay(false)}>Cancel Payment</CancelPayment>
             <Cash onClick={()=>{paymentSuccess({create_time:Date.now()})}}>Make Payment On Delivery</Cash>
-        <PayPalButton amount={cart.total} onSuccess={paymentSuccess}/>
+        <PayPalScriptProvider amount={cart.total} onSuccess={paymentSuccess}/>
         </Payment>}
         <Navbar/>
         <Announcement/>
@@ -163,7 +163,6 @@ const Cart = () => {
                         <SummaryItemText>Total</SummaryItemText>
                         <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
                         </SummaryItem>
-                            {/* <PayPalButton amount={cart.total} onSuccess={paymentSuccess}/> */}
                         <Button onClick={()=>setPay(true)}>CHECKOUT NOW</Button>
                     </Summary>
                 :null}
