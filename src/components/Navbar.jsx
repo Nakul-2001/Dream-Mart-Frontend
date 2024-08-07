@@ -104,7 +104,7 @@ cursor:pointer;
     font-size: 1.1rem;
     color:white;    
     padding: 8px 12px;
-    background:#ea4c89;
+    background:teal;
     border:none;
     border-radius:8px;  
 `
