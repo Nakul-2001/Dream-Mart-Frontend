@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /notes.txt
+.env
 # /.pnp
 # .pnp.js
 
