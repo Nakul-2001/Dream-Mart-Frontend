@@ -123,9 +123,11 @@ const Navbar = () => {
     const navigate=useNavigate();
     const location=useLocation();
     console.log(location)
+
     const handleClose = () => {
          setAnchorEl(null);
     };
+
     const handleLogout=()=>{
         dispatch(clearList());
          dispatch(logoutSuccess());
@@ -135,11 +137,13 @@ const Navbar = () => {
     }
 
     const options=[{label:'products'},{label:'men'},{label:'women'},{label:'shoe'},{label:'dress'},{label:'jeans'},{label:'tshirt'}]
+
     const onSearch=(e)=>{
         // console.log(e.target.value);
         if(e.target.value==='products') navigate(`/products`);
         else if(e.target.value) navigate(`/products/${e.target.value}`);
     }
+    
   return (
     <Container>
         <Wrapper>
@@ -163,7 +167,7 @@ const Navbar = () => {
 
             <Center><Link to='/' className='link'>
                 {/* <LogoImage src='https://firebasestorage.googleapis.com/v0/b/shopping-app-5cbfc.appspot.com/o/shopping-cart-3d-render-icon-removebg-preview%20(1).png?alt=media&token=2c07b2b7-4d55-4991-b491-2842125e9538' /> */}
-                <Logo>Fashify</Logo></Link>
+                <Logo>Dream Mart</Logo></Link>
             </Center>
 
             <Right>

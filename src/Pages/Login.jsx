@@ -79,7 +79,9 @@ const Login = () => {
   const dispatch =useDispatch();
   const navigate=useNavigate();
   const location=useLocation();
-  const {isFetching ,error,currentUser} =useSelector(state=>state.user) ;
+
+  const {isFetching,error,currentUser} = useSelector(state=>state.user) ;
+  
   /* get these redux variables from redux named user */
   const handleClick= async e=>{
     e.preventDefault();

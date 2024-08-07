@@ -17,6 +17,7 @@ const Product = () => {
     const total=useSelector(state=>state.cart?state.cart.total:state.cart);
     const user=useSelector(state=>state.user?state.user.currentUser:state.user); 
     const [quantity,setQuantity]=useState(1);
+    
     const [product,setProduct]=useState({});
     const [color,setColor]=useState();
     const [size,setSize]=useState("");

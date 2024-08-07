@@ -76,9 +76,10 @@ const Button=styled.button`
 const Slider = () => {
   const [slideIndex,setSlideIndex]=useState(0);
   const [buttonClicked,setButtonClicked]=useState(false);
+  
   const handleClick=(direction)=>{
     setButtonClicked(true);
-    if(direction==='left'){
+    if(direction ==='left'){
       setSlideIndex((slideIndex-1+3)%3)
     } 
     if(direction==='right')  setSlideIndex((slideIndex+1)%3)
